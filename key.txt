@@ -1,2 +1,2 @@
-# Password for encrypt and decrypt
+# Password for encrypt and decrypt #
 greatPassword42!
