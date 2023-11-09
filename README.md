@@ -1,4 +1,4 @@
-# Bash
+### __Bash__
 *Bash tools and stuff*
 &nbsp;    
 
@@ -65,7 +65,9 @@ Enter passphrase:
 File encrypted_file.txt was encrypted.
 ```
 *Now you can encrypt all of your files so no one view them without the key/passphrase* 
-&nbsp;  
+
+<hr>
+
 ### **Look pro**
 ```sh
 $ sudo apt -y install hollywood
@@ -73,7 +75,9 @@ $ hollywood
 ```
 *Hollywood Screenshot*
 ![Hollywood](hollywood.gif)
-&nbsp;   
+
+<hr>
+  
 ### **Internet speed test CLI**
 *After cloning this bash repo...*
 ```sh
@@ -81,7 +85,9 @@ $ sudo apt -y install speedtest-cli
 $ speedtest
 ```
 ![Speedtest Output](speedtest.png)
-&nbsp;   
+
+<hr>
+  
 ### **Running Bash via Python**
 *prereq*
 ```sh
@@ -100,12 +106,16 @@ $ python bash.py
 ```
 *bash.py outputs cmatrix*
 ![bash.py output](cmatrix.gif)
-&nbsp;   
+
+<hr>
+ 
 ### **Send command via SSH to Raspberry Pi**
 ```sh
 $ ssh pi@localhost 'ls -l'
 ```
-&nbsp;   
+
+<hr>
+ 
 ### **Running dog**
 *Have a dog running accross your screen*
 ```sh
@@ -113,6 +123,9 @@ $ sudo apt -y install oneko
 $ oneko -dog -fg cyan
 ```
 ![oneko dog](oneko_dog.gif)  
+
+<hr>
+
 ### **Cow delivered fortune**
 ```sh
 $ sudo apt -y install fortune 
@@ -121,13 +134,17 @@ $ fortune | cowsay
 ```
 ![Fortune Cow](fortune_cow.png)  
 
+<hr>
+
 ### **Generate  random addresses**
 ```sh
 $ sudo apy -y install rig
 $ rig
 ```
 ![Random Address](random_address.png)
-&nbsp;   
+
+<hr>
+ 
 ### **Wikipedia Data**
 _Could be useful for gathering semi-random data for data science/machine learning programs_  
 &nbsp;  
@@ -145,7 +162,9 @@ $ wikit "machine learning"
 ```
 *wikit machine learning output*  
 ![wikit machine learning](wikit.png)
-&nbsp;  
+
+<hr>
+
 
 ### **Battery Status**
 ```sh
@@ -153,7 +172,9 @@ $ sudo apt -y install acpi
 $ acpi -b
 Battery 0: Discharging, 16%, 00:27:07 remaining
 ```
-&nbsp;  
+
+<hr>
+
 ### **Fuzzy Finder Search**
 ```sh
 $ sudo apt -y install fzf
@@ -161,15 +182,21 @@ $ fzf
 ```
 ![fuzzy search tool](fzf.png)
 &nbsp;  
-*Searching for mcrypt encrypted files within this bash repo*
-&nbsp;  
+*Searching for mcrypt encrypted files within this bash repo using fzf*
+
+<hr>
+
 ### **Terminal Search**
 ```sh
 $ conda install googler
 ```
-&nbsp;
+
+<hr>
+
 ### **Terminal Train**
 ```sh
 $ sudo apt -y install sl 
 ```
 ![Sl Train](sl_train.png)
+
+<hr>
