@@ -136,7 +136,7 @@ $ sudo apt -y install wikit -g
 ```bash
 $ wikit "machine learning"
 ```
-*wikit machine learning output*
+*wikit machine learning output*  
 ![wikit machine learning](wikit.png)
 &nbsp;  
 
@@ -164,21 +164,3 @@ $ conda install googler
 $ sudo apt -y install sl 
 ```
 ![Sl Train](sl_train.png)
-&nbsp;
-### **Next bash tool**
-```console
-$ [insert next bash tool] # placeholder
-$ echo This is md-console
-This code section is md-console 
-
-    ```console
-    $
-    ```
-$ echo Not md-bash
-Not md-bash 
-
-    ```bash
-    $ 
-    ```
-$ Do something
-```
