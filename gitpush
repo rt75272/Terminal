@@ -1,4 +1,5 @@
 gitpw
+xclip -o
 git status
 git add .
 git commit

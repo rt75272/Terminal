@@ -18,6 +18,13 @@ sudo apt -y install php-pgsql
 sudo apt -y install default-jdk
 sudo apt -y install nodejs
 
+# Jupyter
+sudo apt -y install python3 python3-dev python3-venv python3-pip
+python3 -m venv myenv
+source myenv/bin/activate
+pip install --upgrade pip
+pip install jupyter
+
 # Terminal tools
 sudo apt -y install screenfetch
 sudo apt -y install redshift
