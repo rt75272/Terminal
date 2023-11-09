@@ -43,6 +43,7 @@ sudo apt -y install cmatrix
 sudo apt -y install fortune
 sudo apt -y install lolcat
 sudo apt -y install figlet
+sudo apt -y install cowsay
 
 # Check for any additional updates and clean up.
 sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove

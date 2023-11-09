@@ -1,34 +1,27 @@
-# bash
-*bash tools and stuff*
+# Bash
+*Bash tools and stuff*
 &nbsp;    
-&nbsp;     
-&nbsp;  
-&nbsp;  
 
-### **prereq**
-**install [linux kubuntu 20.04](https://kubuntu.org/getkubuntu/)**
+
+### **Prereq**
+**install [Linux Debain 12](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)**
 ```sh
 $ sudo apt -y isntall screenfetch
 $ screenfetch
 ```
 *screenfetch output*
-![screenfetch](screenfetch.png)
-
-&nbsp;  
+![screenfetch](screenfetch.png)  
 &nbsp; 
-### **grep for multiple phrases**
+### **Grep for multiple phrases**
 ```bash
 $ ls | grep 'phrase1\|phrase2' 
 ```
-&nbsp;  
-&nbsp;   
-### **bash encryption tool**
+&nbsp;
+### **Bash encryption tool**
 ```bash
 $ sudo apt -y install mcrypt
 $ nano test_file.txt #create test file
 ```
-
-
 *GNU nano &nbsp;test_mcrypt.txt*
 ```bash
 encrypt this file with mcrypt
@@ -59,8 +52,7 @@ $ mcrypt --decrypt text_mcrypt.txt.nc --keyfile key.txt
 $ ls
 key.txt  README.md  test_mcrypt.txt.nc  test_mcrypt.txt  
 ```
-&nbsp;   
-&nbsp;  
+&nbsp;
 ### **Require a password/key to view decrypted file**
 ```bash
 $ mcrypt encrypted_file.txt; rm encrypted_file.txt # only the encrypted file remains
@@ -69,13 +61,11 @@ $ mcrypt -d encrypted_file.txt.nc
 Enter passphrase: 
 File encrypted_file.txt was encrypted.
 ```
-*Now you can encrypt all of your files so no one view them without the key/passphrase*
-&nbsp;   
+*Now you can encrypt all of your files so no one view them without the key/passphrase* 
 &nbsp;  
 ### **Look pro**
 *Hollywood Screenshot*
 ![Hollywood](hollywood.gif)
-&nbsp;  
 &nbsp;   
 ### **Internet speed test CLI**
 *After cloning this bash repo...*
@@ -83,7 +73,6 @@ File encrypted_file.txt was encrypted.
 $ ./install_speed.sh
 $ speedtest
 ```
-&nbsp;  
 &nbsp;   
 ### **Running bash via python**
 *prereq*
@@ -103,13 +92,11 @@ $ python bash.py
 ```
 *bash.py outputs cmatrix*
 ![bash.py output](cmatrix.gif)
-&nbsp;  
 &nbsp;   
 ### **Send command via SSH**
 ```sh
 $ ssh pi@localhost 'ls -l'
 ```
-&nbsp;  
 &nbsp;   
 ### **A few randoms**
 *Have a dog running accross your screen*
@@ -124,12 +111,13 @@ $ sudo apt -y install fortune
 $ sudo apt -y install xcowsay
 $ fortune | xcowsay
 ```
+![Fortune Cow](fortune_cow.png)  
+
 *Generate two random addresses*
 ```bash
 $ sudo apy -y install rig
 $ rig -c 2
 ```
-&nbsp;  
 &nbsp;   
 ### **Wikipedia Data**
 _Could be useful for gathering semi-random data for data science/machine learning programs_  
@@ -164,11 +152,18 @@ $ sudo apt -y install fzf
 &nbsp;  
 *Searching for mcrypt encrypted files within this bash repo*
 &nbsp;  
-&nbsp;  
 ### **Terminal Search**
-```$ conda install googler ```
-
-### **next bash tool**
+```sh
+$ conda install googler
+```
+&nbsp;
+### **Terminal Train**
+```sh
+$ sudo apt -y install sl 
+```
+![Sl Train](sl_train.png)
+&nbsp;
+### **Next bash tool**
 ```console
 $ [insert next bash tool] # placeholder
 $ echo This is md-console
