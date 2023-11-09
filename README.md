@@ -4,7 +4,7 @@
 
 
 ### **Prereq**
-**install [Linux Debain 12](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)**
+**Install [Linux Debain 12](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)**
 ```sh
 $ sudo apt -y isntall screenfetch
 $ screenfetch
@@ -70,9 +70,10 @@ File encrypted_file.txt was encrypted.
 ### **Internet speed test CLI**
 *After cloning this bash repo...*
 ```sh
-$ ./install_speed.sh
+$ sudo apt -y install speedtest-cli
 $ speedtest
 ```
+![Speedtest Output](speedtest.png)
 &nbsp;   
 ### **Running bash via python**
 *prereq*
@@ -118,6 +119,7 @@ $ fortune | xcowsay
 $ sudo apy -y install rig
 $ rig -c 2
 ```
+![Random Address](random_address.png)
 &nbsp;   
 ### **Wikipedia Data**
 _Could be useful for gathering semi-random data for data science/machine learning programs_  
