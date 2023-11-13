@@ -139,14 +139,11 @@ alias zoom="nohup zoom&>/dev/null &"
 alias python="python3"
 alias new="clear && cd ~"
 alias update="
-    cd ~/rtw89
-    git pull
-    cd ~
     sudo apt update
     sudo apt -y upgrade
-    sudo apt -y autoremove
-    conda update conda --all --yes
-    conda update anaconda --all --yes"
+    sudo apt -y autoremove"
+    # conda update conda --all --yes
+    # conda update anaconda --all --yes"
 alias sysinfo="screenfetch"
 alias fortune="fortune | lolcat"
 alias gitpw="mcrypt --decrypt /home/bob/Bash/git_psswrd.txt.nc && cat /home/bob/Bash/git_psswrd.txt | xclip && rm /home/bob/Bash/git_psswrd.txt"
