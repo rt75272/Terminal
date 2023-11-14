@@ -112,24 +112,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-
-# # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/bob/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/bob/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/bob/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/bob/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
-# conda deactivate
-
 # Added aliases
 alias brave="nohup brave-browser&>/dev/null &"
 alias google-chrome="nohup google-chrome&>/dev/null &"
@@ -156,7 +138,8 @@ alias gitreset="git reset --soft HEAD~1"
 alias bedtime="
     cvlc --play-and-exit ~/Downloads/nooo.mp3
     systemctl suspend"
-
+alias reboot="systemctl reboot"
+alias sleep="systemctl suspend"
 # # Work-around fix for tensorflow numa node error/warning.
 # function numa_node_fix() {
 #     for a in /sys/bus/pci/devices/*; do echo 0 | sudo tee -a $a/numa_node; done
@@ -198,4 +181,4 @@ function nope() {
 #   - rm ~/.bashrc
 #   - ln -s /home/bob/Bash/.bashrcexport PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/bob/miniconda3/bin
 
-export PATH="$PATH:$HOME/miniconda3/bin"
+# export PATH="$PATH:$HOME/miniconda3/bin"

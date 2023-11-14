@@ -10,8 +10,8 @@
 $ sudo apt -y isntall screenfetch
 $ screenfetch
 ```
-*screenfetch output*
-![screenfetch](screenfetch.png)  
+*screenfetch output*  
+![screenfetch](photos/screenfetch.png)  
 <hr>
 
 ### **Grep for multiple phrases**
@@ -74,7 +74,7 @@ $ sudo apt -y install hollywood
 $ hollywood
 ```
 *Hollywood Screenshot*
-![Hollywood](hollywood.gif)
+![Hollywood](photos/hollywood.gif)
 
 <hr>
   
@@ -84,7 +84,7 @@ $ hollywood
 $ sudo apt -y install speedtest-cli
 $ speedtest
 ```
-![Speedtest Output](speedtest.png)
+![Speedtest Output](photos/speedtest.png)
 
 <hr>
   
@@ -105,7 +105,7 @@ print(output)
 $ python bash.py
 ```
 *bash.py outputs cmatrix*
-![bash.py output](cmatrix.gif)
+![bash.py output](photos/cmatrix.gif)
 
 <hr>
  
@@ -122,7 +122,7 @@ $ ssh pi@localhost 'ls -l'
 $ sudo apt -y install oneko
 $ oneko -dog -fg cyan
 ```
-![oneko dog](oneko_dog.gif)  
+![oneko dog](photos/oneko_dog.gif)  
 
 <hr>
 
@@ -132,7 +132,7 @@ $ sudo apt -y install fortune
 $ sudo apt -y install cowsay
 $ fortune | cowsay
 ```
-![Fortune Cow](fortune_cow.png)  
+![Fortune Cow](photos/fortune_cow.png)  
 
 <hr>
 
@@ -141,7 +141,7 @@ $ fortune | cowsay
 $ sudo apy -y install rig
 $ rig
 ```
-![Random Address](random_address.png)
+![Random Address](photos/random_address.png)
 
 <hr>
  
@@ -161,7 +161,7 @@ $ sudo apt -y install wikit -g
 $ wikit "machine learning"
 ```
 *wikit machine learning output*  
-![wikit machine learning](wikit.png)
+![wikit machine learning](photos/wikit.png)
 
 <hr>
 
@@ -180,7 +180,7 @@ Battery 0: Discharging, 16%, 00:27:07 remaining
 $ sudo apt -y install fzf
 $ fzf
 ```
-![fuzzy search tool](fzf.png)
+![fuzzy search tool](photos/fzf.png)
 &nbsp;  
 *Searching for mcrypt encrypted files within this bash repo using fzf*
 
@@ -197,6 +197,6 @@ $ conda install googler
 ```sh
 $ sudo apt -y install sl 
 ```
-![Sl Train](sl_train.png)
+![Sl Train](photos/sl_train.png)
 
 <hr>
