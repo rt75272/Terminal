@@ -196,4 +196,6 @@ function nope() {
 
 # Symlink .bashrc 
 #   - rm ~/.bashrc
-#   - ln -s /home/bob/Bash/.bashrc
+#   - ln -s /home/bob/Bash/.bashrcexport PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/bob/miniconda3/bin
+
+export PATH="$PATH:$HOME/miniconda3/bin"
