@@ -140,6 +140,7 @@ alias bedtime="
     systemctl suspend"
 alias reboot="systemctl reboot"
 alias sleep="systemctl suspend"
+alias clean="cd && clear"
 # # Work-around fix for tensorflow numa node error/warning.
 # function numa_node_fix() {
 #     for a in /sys/bus/pci/devices/*; do echo 0 | sudo tee -a $a/numa_node; done
