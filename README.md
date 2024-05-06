@@ -1,4 +1,4 @@
-### __Bash__
+### __BASH__
 *Bash tools and stuff*
 &nbsp;    
 
