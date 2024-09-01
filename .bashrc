@@ -170,6 +170,11 @@ function nope() {
     xinput set-button-map $touchpad_id 1 0 3 4 5 6 7;
 }
 
+
+# DEBAIN error: externally-managed-environment
+#   $ sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+
+
 # export PATH="/usr/local/cuda-11.4/bin:$PATH"
 # export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH"
 # export NVM_DIR="$HOME/.nvm"
