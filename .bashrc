@@ -142,6 +142,9 @@ alias reboot="systemctl reboot"
 alias sleep="systemctl suspend"
 alias clean="cd && clear"
 alias poweroff="systemctl poweroff"
+
+# Connect to render ssh instance.
+alias ssh_connect="ssh srv-crq3n452ng1s73e22cag@ssh.oregon.render.com"
 # # Work-around fix for tensorflow numa node error/warning.
 # function numa_node_fix() {
 #     for a in /sys/bus/pci/devices/*; do echo 0 | sudo tee -a $a/numa_node; done
