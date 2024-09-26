@@ -128,7 +128,7 @@ alias update="
     # conda update anaconda --all --yes"
 alias sysinfo="screenfetch"
 alias fortune="fortune | lolcat"
-alias gitpw="mcrypt --decrypt /home/bob/Bash/git_psswrd.txt.nc && cat /home/bob/Bash/git_psswrd.txt | xclip && rm /home/bob/Bash/git_psswrd.txt"
+alias gitpw="mcrypt --decrypt /home/bob/Bash/git_psswrd.txt.nc && xclip -sel clip /home/bob/Bash/git_psswrd.txt && rm /home/bob/Bash/git_psswrd.txt"
 # alias matlab="
 #     echo matlab .
 #     matlab . &"
