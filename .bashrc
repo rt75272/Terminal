@@ -200,3 +200,11 @@ function nope() {
 #   $ source <virtual_env_name>/bin/activate
 # Install requirements
 #   $ python -m pip install -r requirements
+
+
+# Bash Autocompletion
+bind 'TAB: menu-complete'
+bind 'set show-all-if-ambiguous on'
+bind 'set completion-ignore-case on'
+source /usr/share/bash-completion/bash_completion
+source <(karmadactl completion bash)
