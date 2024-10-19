@@ -115,7 +115,7 @@ alias google-chrome="nohup google-chrome&>/dev/null &"
 alias vivaldi="nohup vivaldi&>/dev/null &"
 alias zoom="nohup zoom&>/dev/null &"
 
-alias python="python3"
+alias python="python3.11"
 alias new="clear && cd ~"
 alias update="
     sudo apt update
