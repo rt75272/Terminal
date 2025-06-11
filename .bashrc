@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+zsh
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -79,18 +81,18 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -al'
-alias la='ls -A'
-alias l='ls -CF'
+#alias ll='ls -l'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -112,99 +114,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Added aliases
-alias brave="nohup brave-browser&>/dev/null &"
-alias google-chrome="nohup google-chrome&>/dev/null &"
-alias vivaldi="nohup vivaldi&>/dev/null &"
-alias zoom="nohup zoom&>/dev/null &"
-
-alias python="python3.11"
-alias new="clear && cd ~"
-alias update="
-    sudo apt update
-    sudo apt -y upgrade
-    sudo apt -y autoremove"
-    # conda update conda --all --yes
-    # conda update anaconda --all --yes"
-alias sysinfo="screenfetch"
-alias fortune="fortune | lolcat"
-alias gitpw="mcrypt --decrypt /home/bob/Bash/git_psswrd.txt.nc && xclip -sel clip /home/bob/Bash/git_psswrd.txt && rm /home/bob/Bash/git_psswrd.txt"
-# alias matlab="
-#     echo matlab .
-#     matlab . &"
-alias darken="redshift -O 6500k -b 0.9"
-alias lighten="redshift -x"
-alias gitreset="git reset --soft HEAD~1"
-alias bedtime="
-    cvlc --play-and-exit ~/Downloads/nooo.mp3
-    systemctl suspend"
-alias reboot="systemctl reboot"
-alias sleep="systemctl suspend"
-alias clean="cd && clear"
-alias poweroff="systemctl poweroff"
-
-# Connect to render ssh instance.
-alias ssh_connect="ssh srv-crq3n452ng1s73e22cag@ssh.oregon.render.com"
-# # Work-around fix for tensorflow numa node error/warning.
-# function numa_node_fix() {
-#     for a in /sys/bus/pci/devices/*; do echo 0 | sudo tee -a $a/numa_node; done
-# }
-
-# Display global bin variable/alias help
-# alias_plain_file_name is a plain text file without a file extension
-function alias_help() {
-    echo "chmod +x <alias_file_name>";
-    echo "sudo cp <alias_file_name> /usr/local/bin/";
-}
-
-# View a given pdf file
-function viewpdf() {
-    nohup google-chrome $1&>/dev/null &
-}
-
-# View all pdf files in the current directory
-function allpdf() {
-     nohup google-chrome *.pdf&>/dev/null &
-}
-
-# Disables the middle button on the touchpad
-function nope() {
-    touchpad_id=$(xinput | grep Touchpad | grep -wo "id=[0-9][0-9]" | grep -Eo '[0-9]{1,4}');
-    xinput set-button-map $touchpad_id 1 0 3 4 5 6 7;
-}
-
-# export PATH="/usr/local/cuda-11.4/bin:$PATH"
-# export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH"
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# # Allows gpu memory expansion when using tensorflow keras
-# export TF_GPU_ALLOCATOR="cuda_malloc_async"
-
-# Symlink .bashrc 
-#   - rm ~/.bashrc
-#   - ln -s /home/bob/Bash/.bashrcexport PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin:/home/bob/miniconda3/bin
-
-# export PATH="$PATH:$HOME/miniconda3/bin"
-
-
-
-# DEBAIN error: externally-managed-environment
-#   $ sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
-
-# VIRTUAL ENVIRONMENT HELP
-# Create virtual environment
-#   $ python -m venv ./<virutal_env_name>[venv|env|.venv|etc]
-# Activate virtual environment
-#   $ source <virtual_env_name>/bin/activate
-# Install requirements
-#   $ python -m pip install -r requirements
-
-
-# Bash Autocompletion
-bind 'TAB: menu-complete'
-bind 'set show-all-if-ambiguous on'
-bind 'set completion-ignore-case on'
-source /usr/share/bash-completion/bash_completion
-source <(karmadactl completion bash)
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/bob/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bob/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bob/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bob/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

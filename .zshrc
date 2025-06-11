@@ -70,15 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    arduino-cli
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    fast-syntax-highlighting
-    zsh-autocomplete
-    zsh-bat
-    git
-)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,40 +102,31 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# Added aliases
-alias brave="nohup brave-browser&>/dev/null &"
-alias google-chrome="nohup google-chrome&>/dev/null &"
-alias vivaldi="nohup vivaldi&>/dev/null &"
-alias zoom="nohup zoom&>/dev/null &"
 
-alias python="python3.11"
-alias new="clear && cd ~"
-alias update="
-    sudo apt update
-    sudo apt -y upgrade
-    sudo apt -y autoremove"
-    # conda update conda --all --yes
-    # conda update anaconda --all --yes"
-alias sysinfo="screenfetch"
-alias fortune="fortune | lolcat"
-alias gitpw="mcrypt --decrypt /home/bob/Bash/git_psswrd.txt.nc && xclip -sel clip /home/bob/Bash/git_psswrd.txt && rm /home/bob/Bash/git_psswrd.txt"
-# alias matlab="
-#     echo matlab .
-#     matlab . &"
-alias darken="redshift -O 6500k -b 0.9"
-alias lighten="redshift -x"
-alias gitreset="git reset --soft HEAD~1"
-alias bedtime="
-    cvlc --play-and-exit ~/Downloads/nooo.mp3
-    systemctl suspend"
-alias reboot="systemctl reboot"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/bob/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/bob/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/bob/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/bob/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+alias python="python3"
 alias sleep="systemctl suspend"
-alias clean="cd && clear"
+alias reboot="systemctl reboot"
 alias poweroff="systemctl poweroff"
-
-# Connect to render ssh instance.
-alias ssh_connect="ssh srv-crq3n452ng1s73e22cag@ssh.oregon.render.com"
-alias ll='ls -al'
-alias la='ls -A'
-alias l='ls -CF'
-# ZSH_THEME="powerlevel10k/powerlevel10k"source ~/powerlevel10k/powerlevel10k.zsh-theme
+# ...existing code...
+alias update="sudo apt update && \
+    sudo apt -y upgrade && \
+    sudo apt -y autoremove && \
+    conda update conda"
+alias mount_lacie="sudo mount /dev/sdd1 /mnt/usb && \
+    cd /mnt/usb/ && \
+    ls -al"
+alias unmount_lacie="sudo umount /mnt/usb"
