@@ -117,16 +117,17 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Aliases
 alias python="python3"
 alias sleep="systemctl suspend"
 alias reboot="systemctl reboot"
 alias poweroff="systemctl poweroff"
-# ...existing code...
 alias update="sudo apt update && \
     sudo apt -y upgrade && \
     sudo apt -y autoremove && \
     conda update conda"
-alias mount_lacie="sudo mount /dev/sdd1 /mnt/usb && \
+alias mount_lacie="sudo mount /dev/sde1 /mnt/usb && \
     cd /mnt/usb/ && \
     ls -al"
 alias unmount_lacie="sudo umount /mnt/usb"
