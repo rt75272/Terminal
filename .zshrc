@@ -131,3 +131,7 @@ alias mount_lacie="sudo mount /dev/sde1 /mnt/usb && \
     cd /mnt/usb/ && \
     ls -al"
 alias unmount_lacie="sudo umount /mnt/usb"
+alias vivaldi="nohup vivaldi >/dev/null 2>&1 &"
+alias firefox="nohup firefox >/dev/null 2>&1 &"
+alias brave="nohup brave >/dev/null 2>&1 &"
+alias google-chrome="nohup google-chrome >/dev/null 2>&1 &"
