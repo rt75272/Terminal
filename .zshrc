@@ -125,8 +125,7 @@ alias reboot="systemctl reboot"
 alias poweroff="systemctl poweroff"
 alias update="sudo apt update && \
     sudo apt -y upgrade && \
-    sudo apt -y autoremove && \
-    conda update conda"
+    sudo apt -y autoremove "
 alias mount_lacie="sudo mount /dev/sde1 /mnt/usb && \
     cd /mnt/usb/ && \
     ls -al"
