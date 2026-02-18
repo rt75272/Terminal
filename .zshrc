@@ -102,42 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bob/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/bob/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bob/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/bob/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Aliases
-alias python="python3"
-alias sleep="systemctl suspend"
-alias reboot="systemctl reboot"
-alias poweroff="systemctl poweroff"
-alias update="sudo apt update && \
-    sudo apt -y upgrade && \
-    sudo apt -y autoremove "
-alias mount_lacie="sudo mount /dev/sde1 /mnt/usb && \
-    cd /mnt/usb/ && \
-    ls -al"
-alias unmount_lacie="sudo umount /mnt/usb"
-alias vivaldi="nohup vivaldi >/dev/null 2>&1 &"
-alias firefox="nohup firefox >/dev/null 2>&1 &"
-alias brave="nohup brave >/dev/null 2>&1 &"
-alias google-chrome="nohup google-chrome >/dev/null 2>&1 &"
-# Volume control aliases
-alias vol="pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}'"
-alias vol_max="pactl set-sink-volume @DEFAULT_SINK@ 100%"
-alias vol_up="pactl set-sink-volume @DEFAULT_SINK@ +5%"
-alias vol_down="pactl set-sink-volume @DEFAULT_SINK@ -5%"
-alias vol_mute="pactl set-sink-mute @DEFAULT_SINK@ toggle"
-alias mic_mute="pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+alias roblox="flatpak run org.vinegarhq.Sober"
+alias update="
+    sudo apt update && sudo apt upgrade -y && 
+    flatpak update -y && 
+    sudo snap refresh && 
+    sudo apt autoremove -y"
+alias wakeup="
+    ansiweather -l 'Garden City,ID,USA' -u imperial &&
+    ansiweather -l 'Garden City,ID,USA' -u imperial -f 3 && 
+    speedtest && 
+    echo 'Checking for updates...' | figlet | lolcat &&
+    update"
