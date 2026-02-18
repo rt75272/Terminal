@@ -114,3 +114,5 @@ alias wakeup="
     speedtest && 
     echo 'Checking for updates...' | figlet | lolcat &&
     update"
+alias python="python3"
+alias pip="pip3"
