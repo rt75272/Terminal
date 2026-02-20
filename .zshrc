@@ -104,15 +104,28 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias roblox="flatpak run org.vinegarhq.Sober"
 alias update="
-    sudo apt update && sudo apt upgrade -y && 
+    sudo -- sh -c 'apt update && 
+    apt upgrade -y && 
     flatpak update -y && 
-    sudo snap refresh && 
-    sudo apt autoremove -y"
-alias wakeup="
-    ansiweather -l 'Garden City,ID,USA' -u imperial &&
-    ansiweather -l 'Garden City,ID,USA' -u imperial -f 3 && 
-    speedtest && 
-    echo 'Checking for updates...' | figlet | lolcat &&
-    update"
+    snap refresh && 
+    apt autoremove -y && 
+    npm install -g npm@latest && 
+    npm update -g && 
+    npm fund'
+"
+# Daily wakeup routine.
+unalias wakeup 2>/dev/null
+wakeup() {
+    sudo -v || return 1 # Check for sudo privileges and prompt if needed.
+    ( while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null & ) # Keep sudo alive in background.
+    ansiweather -l 'Garden City,ID,USA' -u imperial
+    ansiweather -l 'Garden City,ID,USA' -u imperial -f 3
+    screenfetch
+    speedtest
+    echo 'CHECKING FOR UPDATES...' | figlet | lolcat
+    update
+    echo 'THE END.' | figlet | lolcat
+}
 alias python="python3"
-alias pip="pip3"
+alias pip="pip3"    
+alias list_functions="print -l ${(k)functions}"
